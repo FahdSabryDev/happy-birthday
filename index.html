@@ -278,21 +278,13 @@
 </div>
 
 <script>
-  // Target: Feb 28 every year (next occurrence)
+  // Target: March 1, 2026
   function getNextBirthday() {
-    const now = new Date();
-    let year = now.getFullYear();
-    let target = new Date(year, 1, 28, 0, 0, 0); // Feb 28
-    if (now >= target) {
-      target = new Date(year + 1, 1, 28, 0, 0, 0);
-    }
-    return target;
+    return new Date(2026, 2, 1, 0, 0, 0); // March 1, 2026
   }
 
   // Display target date
-  const target = getNextBirthday();
-  const months = ['يناير','فبراير','مارس','أبريل','مايو','يونيو','يوليو','أغسطس','سبتمبر','أكتوبر','نوفمبر','ديسمبر'];
-  document.getElementById('dateDisplay').textContent = `٢٨ ${months[target.getMonth()]} ${target.getFullYear()}`;
+  document.getElementById('dateDisplay').textContent = `١ مارس ٢٠٢٦`;
 
   // Floating hearts
   const heartsEl = document.getElementById('hearts');
@@ -354,9 +346,9 @@
 
     // Update message
     const msgs = [
-      `باقي <span>${days}</span> يوم على اليوم اللي جيتيه واو بجد كويس انك جيتي الدنيا  💖`,
+      `باقي <span>${days}</span> يوم على اليوم اللي جيتيه واو بجد كويس انك جيتي الدنيا 💖`,
       `بحاول اعملك حاجة حلوة يسوسو هبهرك هبهرك 🌹`,
-      `انتظرييييييي فهوووووووود `
+      `انتظرييييييي فهوووووووود 🎂`
     ];
     
     const idx = Math.floor(Date.now() / 30000) % msgs.length;
